@@ -17,7 +17,7 @@ async def startup():
 
 @app.get("/sync")
 def hello():
-    return  {"message": "Hello World"}
+    return {"message": "Hello World"}
 
 
 @app.get("/book/{book_id}")
@@ -36,7 +36,11 @@ async def get_popular_books(db: AsyncSession = Depends(get_db)):
     result = await db.execute(select(Book).order_by(Book.call_count.desc()))
     return result.scalars().all()
 
-@app.post("/book/", response_model=BookResponse, status_code=status.HTTP_201_CREATED)
+
+@app.post(
+    "/book/",
+    response_model=BookResponse,
+    status_code=status.HTTP_201_CREATED)
 async def create_book(book: BookCreate, db: AsyncSession = Depends(get_db)):
     db_book = Book(**book.model_dump())
     db.add(db_book)
