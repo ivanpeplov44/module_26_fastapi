@@ -6,6 +6,7 @@ class BookCreate(BaseModel):
     title: str
     description: Optional[str] = None
 
+
 class BookResponse(BaseModel):
     id: int
     title: str
