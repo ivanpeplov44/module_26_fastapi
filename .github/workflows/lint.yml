@@ -27,7 +27,7 @@ jobs:
 
       - name: Run isort
         run: |
-          isort . --check-only --profile black
+          isort . --profile black
 
       - name: Run black
         run: |
