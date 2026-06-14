@@ -3,7 +3,8 @@ pydantic>=2.0.0
 sqlalchemy==1.4.53
 types-sqlalchemy==1.4.53.38
 mypy>=1.0.0
-black==21.12b0
+black>=23.0.0
+click>=8.0.0
 flake8==4.0.1
 flake8-bugbear==22.1.11
 flake8-pie==0.15.0
