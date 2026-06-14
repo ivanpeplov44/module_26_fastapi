@@ -1,10 +1,10 @@
 from fastapi import FastAPI, HTTPException, Depends, status
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
+
+from database import Base, engine, get_db
 from models import Book
 from schemas import BookCreate, BookResponse
-from database import engine, get_db, Base
-
 
 app = FastAPI()
 
