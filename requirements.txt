@@ -1,6 +1,6 @@
 fastapi>=0.104.0
 pydantic>=2.0.0
-sqlalchemy==1.4.53
+sqlalchemy>=2.0.0
 types-sqlalchemy==1.4.53.38
 mypy>=1.0.0
 black>=23.0.0
