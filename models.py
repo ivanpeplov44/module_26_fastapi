@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Integer, mapped_column, String
 
 from database import Base
 
@@ -6,7 +6,7 @@ from database import Base
 class Book(Base):
     __tablename__ = "Book"
 
-    id = Column(Integer, primary_key=True, index=True)
-    title = Column(String, index=True)
-    description = Column(String, index=True)
-    call_count = Column(Integer, default=0)
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)
+    title: Mapped[str] = mapped_column(String, index=True)
+    description: Mapped[str] = mapped_column(String, index=True)
+    call_count: Mapped[int] = mapped_column(Integer, default=0)
