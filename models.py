@@ -1,3 +1,4 @@
+from sqlalchemy.orm import Mapped
 from sqlalchemy import Integer, mapped_column, String
 
 from database import Base
